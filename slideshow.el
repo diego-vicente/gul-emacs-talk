@@ -1,22 +1,29 @@
 ;; The small snippet of code I wrote for starting the talk. The original idea
 ;; was performed using several .el files by Magnar Sveen at WebRebels.
 
-(defun gul-start-presentation()
+(defun gul-get-heading-start (offset)
+
+  (org-next-visible-heading offset)
+  (point))
+
+(defun gul-narrow-to-slide()
+  (let ((end-slide (gul-get-heading-start 1))
+		(start-slide (gul-get-heading-start -1)))
+  (narrow-to-region start-slide end-slide)))
+
+(defun gul-move-slide(offset)
   (interactive)
-  (org-next-visible-heading -1)
-  (org-narrow-to-element))
+  (widen)
+  (org-next-visible-heading offset)
+  (gul-narrow-to-slide))
 
 (defun gul-next-slide()
   (interactive)
-  (widen)
-  (org-next-visible-heading 1)
-  (org-narrow-to-subtree))
+  (gul-move-slide 1))
 
 (defun gul-previous-slide()
   (interactive)
-  (widen)
-  (org-next-visible-heading -1)
-  (org-narrow-to-element))
+  (gul-move-slide -1))
 
 (defun gul-exit-presentation()
   (interactive)
