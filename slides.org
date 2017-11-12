@@ -1,6 +1,6 @@
-#+TITLE:  The first hour of your next ten years: An Emacs introduction
-#+AUTHOR: Diego Vicente Martín
-#+EMAIL:  mail@diego.codes
+#+Title:  The first hour of your next ten years: An Emacs introduction
+#+Author: Diego Vicente Martín
+#+Email:  mail@diego.codes
 #+Date:   2017-11-21
 
 * Introduction
