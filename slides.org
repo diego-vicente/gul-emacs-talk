@@ -10,7 +10,7 @@ About me:
 - Emacs user for around two years.
 - I like trains.
 
-- GitHub   :: [[https://github.com/][DiegoVicen]]
+- GitHub   :: [[https://github.com/DiegoVicen][DiegoVicen]]
 - Twitter  :: [[https://twitter.com/DiegoVicen][@DiegoVicen]]
 - Telegram :: [[https://telegram.me/DiegoVicente][@DiegoVicente]]
 - If everything else fails, [[mailto:mail@diego.codes][send me an email]]
