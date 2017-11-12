@@ -90,4 +90,50 @@ wc -l .vimrc
 - In any case, learn vim. You can thank me later.
 
 
+* Getting started with Emacs
+
+- Install it from your package manager of choice:
+
+| System  | Build                                        |
+|---------+----------------------------------------------|
+| Ubuntu  | =emacs-snapshot= from =ppa:ubuntu-elisp/ppa= |
+| Arch    | =$ pacman -S emacs=                          |
+| macOS   | =brew cask install emacs=                    |
+| Windows | [[https://ftp.gnu.org/gnu/emacs/windows/][May the gods help you]]                        |
+
+** Before actually using Emacs
+
+- Emacs relies heavily on the modifier keys
+- An usual recommendation is to rebind ctrl to Caps-lock
+- This is usually done in OS-wide
+
+- Let's be honest, you don't use Caps-lock that much anyway.
+
+** Booting up!
+
+- Use the GUI version for proper support and eye-candy.
+  - Some terminal emulators will capture your modifiers.
+  - Don't worry, you'll keep your beloved terminal! -- more later.
+
+- Welcome to Emacs!
+
+** Emacs notation
+
+- =C-f=     :: Press at the same time ctrl and f (ctrl+f)
+- =M-d=     :: Press alt+d (probably)
+- =C-M-s=   :: Press ctrl+alt+s
+- =C-x C-c= :: Press ctrl+x and then press ctrl+c
+- =C-x g=   :: Press ctrl+x and then only press g
+- =C-c p P= :: Press ctrl+x, then p, and finally shift+p
+
+** First level is always a tutorial
+
+- You can enter the tutorial clicking on the link on the splash screen
+- Another way to enter the tutorial is =C-h t=
+
+- You will learn by practice movement, edition, and basic concepts of Emacs.
+- You should do this. Actually, several times.
+
+- When using the editor at first, put effort on practising new skills.
+
 #  LocalWords:  UC vimscript ctrl
