@@ -1,0 +1,93 @@
+#+TITLE:  The first hour of your next ten years: An Emacs introduction
+#+AUTHOR: Diego Vicente Martín
+#+EMAIL:  mail@diego.codes
+#+Date:   2017-11-21
+
+* Introduction
+
+About me:
+- Computer Science Graduate, M.Sc. @ UC3M
+- Emacs user for around two years.
+- I like trains.
+
+- GitHub   :: [[https://github.com/][DiegoVicen]]
+- Twitter  :: [[https://twitter.com/DiegoVicen][@DiegoVicen]]
+- Telegram :: [[https://telegram.me/DiegoVicente][@DiegoVicente]]
+- If everything else fails, [[mailto:mail@diego.codes][send me an email]]
+
+** About this talk
+
+1) Some brief context
+2) Getting started with Emacs
+3) Don't fear Emacs-Lisp
+4) Packages worth checking out
+5) Ask me something if I messed up
+
+** The most important Emacs insight
+
+- Emacs has _terrible_ defaults.
+- It is super powerful once you configure it.
+
+- Emacs is really old. (that's good)
+- There are packages for (almost) everything.
+
+- Is free, like in beer and freedom!
+
+** Wait, that was not the deal!
+
+- "But Diego, I don't want to configure anything, I just want an editor!"
+
+- I have good news for you!
+- I can show you the best text editor ever.
+- Zero configuration needed.
+
+- "What is it?!"
+
+** ... It's vim!
+
+- Yup. For real.
+  - It's everywhere*.
+  - It's comfortable.
+  - Zero configuration needed.
+
+- You can exit with =:q=, =:quit=, =:wq=, =:q!=, =:exit=, =:x=, =ZZ= and =ZQ=.
+  Stop being a baby.
+
+** Where's the trick?
+
+- Probably, you want to do more things apart from editing text.
+- Vim is pure UNIX philosophy: it can only edit text^{(but it's super good)}
+- Configure, rebind keys, install plugins... You need vimscript.
+
+#+BEGIN_SRC
+filetype plugin indent on
+  augroup Misc " {{{2
+    autocmd!
+    autocmd FileType netrw call s:scratch_maps()
+    " [...]
+    autocmd BufWritePre,FileWritePre /etc/* if &ft == "dns" |
+          \ exe "normal msHmt" |
+          \ exe "gl/^\\s*\\d\\+\\s*;\\s*Serial$/normal ^\<C-A>" |
+          \ exe "normal g`tztg`s" |
+          \ endif
+    autocmd CursorHold,BufWritePost,BufReadPost,BufLeave *
+      \ if !$VIMSWAP && isdirectory(expand("<amatch>:h")) |
+      let &swapfile = &modified | endif
+  augroup END " }}}2
+#+END_SRC
+
+** If you want your own editor, welcome to Emacs
+
+- Run this. If the result is larger than 20, install Emacs.
+
+#+BEGIN_SRC bash :dir ~/
+wc -l .vimrc
+#+END_SRC
+
+- You will be faster if your tools apply to your whole workflow.
+- Starting is slow, it eventually pays off.
+
+- In any case, learn vim. You can thank me later.
+
+
+#  LocalWords:  UC vimscript ctrl

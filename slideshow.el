@@ -2,7 +2,6 @@
 ;; was performed using several .el files by Magnar Sveen at WebRebels.
 
 (defun gul-get-heading-start (offset)
-
   (org-next-visible-heading offset)
   (point))
 
