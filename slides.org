@@ -7,8 +7,8 @@
 
 About me:
 - Computer Science Graduate, M.Sc. @ UC3M
+- Almost data scientist.
 - Emacs user for around two years.
-- I like trains.
 
 - GitHub   :: [[https://github.com/DiegoVicen][DiegoVicen]]
 - Twitter  :: [[https://twitter.com/DiegoVicen][@DiegoVicen]]
@@ -101,14 +101,6 @@ wc -l .vimrc
 | macOS   | =brew cask install emacs=                    |
 | Windows | [[https://ftp.gnu.org/gnu/emacs/windows/][May the gods help you]]                        |
 
-** Before actually using Emacs
-
-- Emacs relies heavily on the modifier keys
-- An usual recommendation is to rebind ctrl to Caps-lock
-- This is usually done in OS-wide
-
-- Let's be honest, you don't use Caps-lock that much anyway.
-
 ** Booting up!
 
 - Use the GUI version for proper support and eye-candy.
@@ -128,7 +120,7 @@ wc -l .vimrc
 
 ** First level is always a tutorial
 
-- You can enter the tutorial clicking on the link on the splash screen
+- You can enter the tutorial clicking on the link on the splash screen.
 - Another way to enter the tutorial is =C-h t=
 
 - You will learn by practice movement, edition, and basic concepts of Emacs.
@@ -136,4 +128,49 @@ wc -l .vimrc
 
 - When using the editor at first, put effort on practising new skills.
 
-#  LocalWords:  UC vimscript ctrl
+** Muscle memory is the key
+
+- Start using Emacs for small tasks.
+- *Learn by conscious practice!*
+
+- Incremental learning usually helps.
+
+- If you don't get used to something, don't worry too much.
+
+** Introducing you to your best friends
+
+- =C-h= prefix is used for help
+- =C-h f= :: define a function
+- =C-h v= :: define a variable
+- =C-h m= :: define the current modes
+
+- =C-h k= :: which function is bind to a keystroke
+- =C-h w= :: where a function is bind
+
+- For everything else, =C-h a=.
+
+** Emacs is the self-documenting editor
+
+- Everything is extremely well documented.
+- Only your own Emacs can help you understand your own Emacs.
+- Third party packages are included in this documentation as well.
+- Use them every single time before googling stuff.
+
+** Things I recommend you do:
+
+- [[https://www.emacswiki.org/emacs/MovingTheCtrlKey][Rebind Caps-lock to Ctrl]]
+- [[https://stackoverflow.com/questions/6344389/osx-emacs-unbind-just-the-right-alt][Unbind right alt key]]
+- [[https://github.com/DiegoVicen/my-emacs#basic-emacs-setup][Take a look at the basic things in my configuration]]
+
+- Use the GUI for full power!
+- You can use your terminal inside Emacs.
+
+** Things people recommend but I don't:
+
+- [[https://www.emacswiki.org/emacs/Evil][Use evil-mode]] to get vim inside Emacs.
+- [[https://www.emacswiki.org/emacs/EmacsAsDaemon#toc17][Run Emacs as a daemon.]]
+- Install a pre-configured distribution.
+- Use =customize=.
+
+
+#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA
