@@ -264,4 +264,60 @@ wc -l .vimrc
 (global-set-key (kbd "C-c t") 'shell)
 #+END_SRC
 
-#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA
+** What can I configure?
+
+- Virtually everything:
+  - All keys are functions that can be modified
+  - You can build on top of other functions
+  - Graphical stuff, including other tools...
+
+- Don't reinvent the wheel! You can also install packages.
+
+** Including MELPA
+
+- Emacs comes with a package manager.
+- MELPA is much more complete than the regular repository.
+
+#+BEGIN_SRC emacs-lisp
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("MELPA" . "https://melpa.org/packages/") t)
+  (package-initialize))
+#+END_SRC
+
+** Now you can install packages!
+
+- Use =M-x list-packages= to see the packages available.
+- Use =M-x install-package= to install a package by name.
+
+- Include =(require <package>)= to force Emacs loading the package's functions.
+- After getting some grip on it, I recommend checking =use-package= for
+  building your configuration.
+
+
+* Some packages worth checking out
+
+- Packages will be the foundation of your configuration.
+- Packages can coexist without clashing (most likely).
+- This is when Emacs starts being fun.
+
+** For programming
+
+- Almost every language has dedicated packages for it:
+  - Usually, a major mode and complementary minor modes.
+  - A quick search in MELPA or Google probably gives you ideas.
+  - /All/ languages have great support and easy setup (except Java).
+
+- Check other people's configuration for a language you want to use to get ideas.
+- You can start [[https://github.com/DiegoVicen/my-emacs#programming-modes][by checking if I did something on your language]].
+
+** An absolute must: Magit
+
+- [[https://magit.vc/][Magit]] is a git porcelain for Emacs.
+- You can execute almost all kinds of git commands with a few keystrokes.
+- It is just a reason by itself to use Emacs.
+
+
+#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit
