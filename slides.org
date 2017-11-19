@@ -173,4 +173,95 @@ wc -l .vimrc
 - Use =customize=.
 
 
+* Don't fear Emacs-Lisp!
+
+- This is not an elisp introduction.
+- I will show you what you need to configure things.
+
+- Let's get this straight: Lisp is easy.
+  - =f(x, y, z)= is written as =(f x y z)=
+  - Now you can read Lisp!
+
+** A quick insight beforehand
+
+- Emacs is not a text editor: Emacs *is a REPL*
+
+- Executing elisp code can change the state of the editor.
+- This is the way to customize Emacs.
+
+- =M-:= lets you evaluate elisp code
+
+** Starting your own configuration
+
+- Your configuration is an elisp file
+- It contains the code to be executed when starting Emacs.
+
+- All the code in there can be executed after starting and will also change the
+  state of the editor!
+
+** Where the code lives
+
+- You can host your configuration in two different places:
+  1. =~/.emacs=
+  2. =~/.emacs.d/init.el=
+
+- I recommend the latter (tidier for VCS)
+
+** Some basic concepts
+
+- There are some important configuration concepts you need to understand.
+- Understanding these should be enough to configure most packages.
+
+*** Setting a variable
+
+- All variables are global
+- Variables are used as switches some times
+- You can set a variable global, local or to a default value.
+
+#+BEGIN_SRC emacs-lisp
+(setq compilation-scroll-output t)
+(setq-local compilation-scroll-output t)
+(setq-default compilation-scroll-output t)
+#+END_SRC
+
+*** What can a variable be set to?
+
+- Basically everything, there is no type system.
+- You can even set variables to functions by quoting them
+
+#+BEGIN_SRC emacs-lisp
+(setq inhibit-splash-screen t
+      initial-scratch-message nil
+      initial-major-mode 'org-mode)
+#+END_SRC
+
+*** Quoting lists and functions
+
+- Quoting makes a function not evaluated.
+
+#+BEGIN_SRC emacs-lisp
+(foo bar baz)  ;; => means apply function foo with bar and baz as parameters
+'(foo bar baz) ;; => is just a list of 3 values: foo, bar and baz
+#+END_SRC
+
+*** Hook, line and sinker
+
+- You can use hooks to automatically execute something when an event happens
+- Almost all major modes and important events have a hook.
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'prog-mode-hook 'git-gutter-mode)
+;; enable git-gutter-mode every time a programming mode is activated.
+#+END_SRC
+
+*** Binding keys
+
+- You can bind or rebind everything into everything.
+- Use key-maps to make mode-dependant bindings.
+- The =C-c <single-key>= is reserved for user bindings.
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-c t") 'shell)
+#+END_SRC
+
 #  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA
