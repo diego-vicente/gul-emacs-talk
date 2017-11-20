@@ -59,7 +59,7 @@ About me:
 - Vim is pure UNIX philosophy: it can only edit text^{(but it's super good)}
 - Configure, rebind keys, install plugins... You need vimscript.
 
-#+BEGIN_SRC
+#+BEGIN_SRC :exports none
 filetype plugin indent on
   augroup Misc " {{{2
     autocmd!
@@ -458,6 +458,7 @@ return np.dot(np.linalg.inv(A), B)
 
 - Remember, this presentation is org!
 
+
 * Tips and next steps:
 
 - Don't over-do it:
@@ -489,7 +490,12 @@ return np.dot(np.linalg.inv(A), B)
 
 ** Thank you!
 
-** Just a header to keep me from showing you the list of flyspell words.
+** Just a dummy header                                             :noexport:
+
+#+STARTUP: beamer
+#+OPTIONS: H:2
+#+LaTeX_CLASS: beamer
+#+BEAMER_FRAME_LEVEL: 3
 
 #  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit ing Reddit
 #  LocalWords:  flyspell
