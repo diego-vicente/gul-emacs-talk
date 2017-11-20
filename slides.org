@@ -454,7 +454,42 @@ return np.dot(np.linalg.inv(A), B)
 
 - =org-ref= :: citation manager written in org
 - =hugo= :: Static site generator that supports org
+- [[https://www.youtube.com/watch?v=dljNabciEGg][Literate devops]], according to Howard Abrams
 
 - Remember, this presentation is org!
 
-#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit ing
+* Tips and next steps:
+
+- Don't over-do it:
+  - Start with a minimal configuration.
+  - Control your Emacs before building more on top.
+  - _DON'T COPY SOMEONE'S CONFIGURATION_.
+
+- Be patient:
+  - It takes time to develop insight and muscle memory.
+  - Don't move your workflow to Emacs just yet.
+
+** Several resources
+
+- [[https://www.reddit.com/r/emacs/][r/emacs]] in Reddit
+- #emacs in IRC (=M-x erc= is a IRC client in Emacs)
+
+- Emacs! Remember to ask Emacs in case of doubt.
+
+- Just send me an email/tweet if you have a question!
+
+** Questions?
+
+- Have you heard of a feature in Emacs and I didn't mention it?
+- Are you unsure of how to do something you need in Emacs?
+- Do you want me to talk about anything related to it?
+- Do you want me to whistle In a Sentimental Mood, by Duke Ellington?
+
+- *Ask me!*
+
+** Thank you!
+
+** Just a header to keep me from showing you the list of flyspell words.
+
+#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit ing Reddit
+#  LocalWords:  flyspell
