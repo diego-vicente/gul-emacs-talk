@@ -394,3 +394,67 @@ wc -l .vimrc
 - =C-x C-q= lets you make changes by writing in the buffer.
 
 - Pro tip: =(add-hook 'dired-mode-hook 'dired-hide-details-mode)=
+
+** Organize your life in plain text: =org-mode=
+
+- =org= mode is a note manager
+- It is super extensible and you can work magic with it
+
+- It is the other deal-breaker
+
+*** Note taking in org
+
+- Org has its own markdown language
+  - *Bold*
+  - /Italics/
+  - _underline_
+  - And yeah, this is a list.
+
+*** It also has tables!
+
+This is a cool thing to do a live demo.
+
+*** TODO Task management in org
+
+- Org headings can be marked as to-do
+- You can also schedule tasks and add deadlines
+
+- If you schedule things, you can see them in the agenda.
+
+*** Exporting notes
+
+- What is the point of org if you can't share notes?
+- =C-c C-e= brings up the export engine
+- You can add more export modes with packages
+
+*** Source blocks are OP
+
+#+BEGIN_SRC python
+import numpy as np
+
+A = np.array( [[7, 5, -3],
+               [3, -5, 2],
+               [5, 3, -7]])
+
+B = np.array( [[16],
+               [-8],
+               [ 0]] )
+
+return np.dot(np.linalg.inv(A), B)
+#+END_SRC
+
+*** What can you do with source blocks?
+
+- Literate programming
+- Tutorials
+- Scripts
+- Include code to generate figures
+
+*** What else to do with org?
+
+- =org-ref= :: citation manager written in org
+- =hugo= :: Static site generator that supports org
+
+- Remember, this presentation is org!
+
+#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit ing
