@@ -319,5 +319,45 @@ wc -l .vimrc
 - You can execute almost all kinds of git commands with a few keystrokes.
 - It is just a reason by itself to use Emacs.
 
+** Organizing your life in projects: Projectile
+
+- Uses the concept of project:
+  - A project is something with a configuration file or a VCS
+
+- Lets you compile, run, test, search, etc per project
+
+- Combine it with =persp= to get window distribution per project
+
+** Connecting to a remote server: TRAMP
+
+- TRAMP is black magic included in Emacs by default
+  1. Run =find-file= (=C-x C-f=) and erase the current directory
+  2. Write =ssh:<user>@<server>= to connect to a remote server
+
+- You keep all your configuration and tools when using TRAMP
+
+- You can even bookmark remote files to access them later
+
+** Using the terminal inside Emacs
+
+- There two main alternatives:
+  1) =shell=: A terminal emulator inside Emacs
+	 * It uses your =zshrc= / =bashrc= / =fishrc=
+	 * For that reason, it may break if your configuration is too complex
+  2) =eshell=: A terminal emulator written in elisp
+	 * It has its own configuration and implementation of some commands
+	 * It is a buffer
+	 * Inadequate for certain tasks
+
+- =shell= should suffice everything you do in your current setup.
+
+** Other tools for programming
+
+- =smartparens= :: automatically close parenthesis/braces/quotes
+- =auto-complete/company= :: code auto-completion back-ends
+- =flycheck= :: code linting
+
+- Now Emacs is a small, Swiss knife IDE!
+
 
 #  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit
