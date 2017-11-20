@@ -313,13 +313,13 @@ wc -l .vimrc
 - Check other people's configuration for a language you want to use to get ideas.
 - You can start [[https://github.com/DiegoVicen/my-emacs#programming-modes][by checking if I did something on your language]].
 
-** An absolute must: Magit
+*** An absolute must: Magit
 
 - [[https://magit.vc/][Magit]] is a git porcelain for Emacs.
 - You can execute almost all kinds of git commands with a few keystrokes.
 - It is just a reason by itself to use Emacs.
 
-** Organizing your life in projects: Projectile
+*** Organizing your life in projects: Projectile
 
 - Uses the concept of project:
   - A project is something with a configuration file or a VCS
@@ -328,7 +328,7 @@ wc -l .vimrc
 
 - Combine it with =persp= to get window distribution per project
 
-** Connecting to a remote server: TRAMP
+*** Connecting to a remote server: TRAMP
 
 - TRAMP is black magic included in Emacs by default
   1. Run =find-file= (=C-x C-f=) and erase the current directory
@@ -338,7 +338,7 @@ wc -l .vimrc
 
 - You can even bookmark remote files to access them later
 
-** Using the terminal inside Emacs
+*** Using the terminal inside Emacs
 
 - There two main alternatives:
   1) =shell=: A terminal emulator inside Emacs
@@ -351,13 +351,46 @@ wc -l .vimrc
 
 - =shell= should suffice everything you do in your current setup.
 
-** Other tools for programming
+*** Other tools for programming
 
 - =smartparens= :: automatically close parenthesis/braces/quotes
-- =auto-complete/company= :: code auto-completion back-ends
+- =auto-complete= / =company= :: code auto-completion back-ends
 - =flycheck= :: code linting
 
 - Now Emacs is a small, Swiss knife IDE!
 
+** Increasing your productivity inside Emacs
 
-#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit
+- Now that you should be able to work in Emacs...
+
+- ... It's time to be *faster* in Emacs.
+
+*** Better functions and completion: =helm=
+
+- =helm= is a narrowing framework
+- It overrides some functions (find files, search, =M-x=...)
+- Enables search in candidates, fuzzy search, patterns, etc
+
+- It's maybe a bit too much for you
+
+*** A lighter and powerful alternative: =ivy=, =counsel=
+
+- =ivy= is a lighter and minimal alternative to =helm=
+- Most of the times is faster
+- Reduced and less intrusive interface
+- It has /almost/ all of =helm='s features
+
+*** A more powerful search: =swiper=
+
+- Built on top of =ivy=
+- Its =isearch= with an overview of results
+
+- This may seem dumb but is f***ing amazing.
+
+*** Your file system in Emacs: =dired=
+
+- Default in Emacs
+- Copy, rename, move and delete files.
+- =C-x C-q= lets you make changes by writing in the buffer.
+
+- Pro tip: =(add-hook 'dired-mode-hook 'dired-hide-details-mode)=
