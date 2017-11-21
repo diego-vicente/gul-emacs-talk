@@ -240,8 +240,12 @@ wc -l .vimrc
 - Quoting makes a function not evaluated.
 
 #+BEGIN_SRC emacs-lisp
-(foo bar baz)  ;; => means apply function foo with bar and baz as parameters
-'(foo bar baz) ;; => is just a list of 3 values: foo, bar and baz
+(foo bar baz)
+;; `-> means apply function foo with
+;; bar and baz as parameters
+'(foo bar baz)
+;; '=> is just a list of 3 values:
+;; foo, bar and baz
 #+END_SRC
 
 *** Hook, line and sinker
@@ -251,7 +255,8 @@ wc -l .vimrc
 
 #+BEGIN_SRC emacs-lisp
 (add-hook 'prog-mode-hook 'git-gutter-mode)
-;; enable git-gutter-mode every time a programming mode is activated.
+;; enable git-gutter-mode every time a
+;; programming mode is activated.
 #+END_SRC
 
 *** Binding keys
@@ -464,7 +469,7 @@ return np.dot(np.linalg.inv(A), B)
 - Don't over-do it:
   - Start with a minimal configuration.
   - Control your Emacs before building more on top.
-  - _DON'T COPY SOMEONE'S CONFIGURATION_.
+  - _DON'T COPY SOMEONE ELSE'S CONFIGURATION_.
 
 - Be patient:
   - It takes time to develop insight and muscle memory.
@@ -490,12 +495,15 @@ return np.dot(np.linalg.inv(A), B)
 
 ** Thank you!
 
-** Just a dummy header                                             :noexport:
+- You can find all the material used in the presentation in
+  https://github.com/DiegoVicen/gul-emacs-talk
+
+** Just a dummy header, move along!                                :noexport:
 
 #+STARTUP: beamer
 #+OPTIONS: H:2
 #+LaTeX_CLASS: beamer
 #+BEAMER_FRAME_LEVEL: 3
 
-#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit ing Reddit
-#  LocalWords:  flyspell
+#  LocalWords:  UC vimscript ctrl elisp REPL VCS MELPA Magit ing Reddit ELSE'S
+#  LocalWords:  flyspell swiper
