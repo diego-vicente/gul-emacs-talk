@@ -1,0 +1,21 @@
+#+Title:  XXXI GUL Tech Talks
+#+Author: Diego Vicente Martín
+#+Email:  mail@diego.codes
+#+Date:   2017-11-21
+
+This repository contains all the material used in my talk /La primera hora de
+tus próximos 10 años: una introducción a Emacs/ ("The first hour of your next
+ten years: an introduction to Emacs") for the XXXI GUL Tech Talks. The talk
+happened November 21, 2017 in the Leganés campus of UC3M. If you came, thank
+you for your time! All the information for the talk can be found in [[https://cursos.gul.es/xxxi-jornadas-tecnicas-del-gul/la-primera-hora-de-tus-proximos-10-anos-una-introduccion-a-emacs][the GUL
+page]].
+
+Here you can find several files:
+- [[file:slides.org][slides.org]]: containing the plain text file used for the talk.
+- [[file:slides.pdf][slides.pdf]]: containing the PDF-exported version of the talk.
+- [[file:gul-show.el][gul-show.el]]: an Emacs-Lisp file containing the functions I coded in the show
+  for the presentation (documented and well-polished).
+
+If you attended the talk, thank you for your time - hope you found the
+motivation I tried to show you to start learning Emacs. If you have any doubts
+or any errata, let me know and I will try to fix it!
